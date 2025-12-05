@@ -1,3 +1,4 @@
+
 body{
     font-family: "MedievalSharp", sans-serif;
 }
@@ -105,7 +106,9 @@ body{
 .container .carta img{
     width: 100%;
     padding: 20px;
+
 }
+
 
 
 .container .carta .estrela{
@@ -117,7 +120,7 @@ body{
 .container .carta .informacoes{
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: 355px;
     font-size: 12px;
     gap: 10px;
     background-color: #ffffff;
@@ -127,7 +130,7 @@ body{
 }
 
 .container .carta .informacoes .nome-personagem{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     color: #111111;
 }
@@ -145,6 +148,14 @@ body{
     color: #4D8E5C;
 }
 
+.container .cartas .carta .informacoes .abrir-popup{
+    background-color: #d1d1d1;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: auto;
+}
+
 .container .carta .informacoes .btn-comprar{
     color: #EDEDED;
     background-color: #6528D3;
@@ -154,6 +165,8 @@ body{
     transition: 0.3s;
     text-align: center;
     text-decoration: none;
+    margin-top: auto;
+    
 }
 
 .container .carta .informacoes .btn-comprar:hover{
@@ -176,3 +189,55 @@ body{
 .mostrar{
     display: block;
 }
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-conteudo {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    position: relative;
+    max-width: 70%;
+}
+
+/*
+.popup-conteudo img {
+    width: 100%;
+    height: 460px;
+}
+*/
+
+.popup-imagens {
+    max-height: 80vh;      /* altura máxima da área rolável */
+    overflow-y: auto;      /* ativa rolagem vertical */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    scrollbar-width: none; 
+}
+
+
+
+
+
+
+/* CASO PRECISE COLOCAR O X NOVAMENTE PARA FECHAR POP-UPS 
+.popup-fechar {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+ACRESCENTAR NO FINAL DO HTML <span class="popup-fechar">&times;</span>
+*/
